@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC000000"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/BLOCK_MediaButton"
+            android:layout_alignTop="@+id/mediacontroller_progress"
+            android:layout_alignBottom="@+id/mediacontroller_progress"
+            android:paddingTop="4dip"
+            android:paddingBottom="4dip">
+            <ImageButton
+                android:id="@+id/pause"
+                android:scaleType="fitCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/time_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dip"
+            android:textColor="#bebebe"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/BLOCK_MediaButton"
+            android:layout_centerVertical="true"/>
+        <SeekBar
+            android:id="@+id/mediacontroller_progress"
+            style="@style/HoloSeekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dip"
+            android:paddingBottom="4dip"
+            android:layout_toRightOf="@+id/time_current"
+            android:layout_toLeftOf="@+id/time"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#bebebe"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@+id/fullscreen"
+            android:layout_centerVertical="true" />
+
+        <ImageButton android:id="@+id/fullscreen"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/mediacontroller_progress"
+            android:layout_alignBottom="@+id/mediacontroller_progress"
+            android:scaleType="fitCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/full_screen"
+            android:background="@android:color/transparent"
+            android:paddingTop="4dip"
+            android:paddingBottom="4dip"/>
+    </RelativeLayout>
+</LinearLayout>
